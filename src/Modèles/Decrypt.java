@@ -49,15 +49,13 @@ public class Decrypt {
 	
 	/*//////////   Version 27 Letters   //////////*/ 
 	
-	static String decryptV27(String data) {
+	static String decryptV27(String data, String attente) {
 		String chaineCryptee = "";
 		for(int a = 97; a < 122; a++) {
 			for(int b = 97; b < 122; b++) {
 				for(int c = 97; c < 122; c++) {
 					for(int d = 97; d < 122; d++) {
 						System.out.println("a : " + a + " b : " + b + " c : " + c + " d : " + d);
-						
-						
 					    for(int i = 0, j = 0; i < data.length(); i++){
 					    	if(j==0) {
 					    		chaineCryptee += (char)((int)data.charAt(i) ^ a);
@@ -81,11 +79,18 @@ public class Decrypt {
 				        			}
 				        		}
 				        	}chaineCryptee += "\n"; 
+				        	if (chaineCryptee.contains(attente)) {
+				        		a = 122;
+				        		b = 122;
+				        		c = 122;
+				        		d = 121;
+				        	}
 					    
 				        }
 					}
 				}
 			}
+		
 		return chaineCryptee;
 	}
 }
