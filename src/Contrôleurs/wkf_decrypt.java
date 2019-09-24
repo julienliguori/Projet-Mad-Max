@@ -13,7 +13,7 @@ public class wkf_decrypt {
 		String reponse;
 		try {
 			o1 = new Fichier();
-			o1.setData("C:\\Users\\julien liguori\\eclipse-workspace\\Projet Mad Max\\Source.txt", "j'ai faim");
+			o1.setData("C:\\Users\\julien liguori\\eclipse-workspace\\Projet Mad Max\\Source.txt", "Hello Word");
 			
 			reponse = o1.getData("C:\\Users\\julien liguori\\eclipse-workspace\\Projet Mad Max\\Source.txt");
 			System.out.println(reponse);
