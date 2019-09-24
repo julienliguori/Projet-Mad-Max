@@ -18,7 +18,7 @@ public class wkf_decrypt {
 			reponse = o1.getData("C:\\Users\\julien liguori\\eclipse-workspace\\Projet Mad Max\\Source.txt");
 			System.out.println(reponse);
 			
-			reponse = o1.crypter(reponse, "mpcd");
+			reponse = o1.crypter(reponse, "mpot");
 			System.out.println(reponse);
 			o1.setData("C:\\Users\\julien liguori\\eclipse-workspace\\Projet Mad Max\\Test.txt", reponse);
 			

@@ -51,36 +51,41 @@ public class Decrypt {
 	
 	static String decryptV27(String data) {
 		String chaineCryptee = "";
-		for(int a = 65; a < 91; a++) {
-			System.out.println("a : " + a);
-			for(int b = 65; b < 90; b++) {
-				for(int c = 65; c < 90; c++) {
-					for(int d = 65; d < 90; d++) {
+		for(int a = 97; a < 122; a++) {
+			for(int b = 97; b < 122; b++) {
+				for(int c = 97; c < 122; c++) {
+					for(int d = 97; d < 122; d++) {
+						System.out.println("a : " + a + " b : " + b + " c : " + c + " d : " + d);
+						
 						
 					    for(int i = 0, j = 0; i < data.length(); i++){
 					    	if(j==0) {
 					    		chaineCryptee += (char)((int)data.charAt(i) ^ a);
 					    	}else if(j==1) {
 					    		chaineCryptee += (char)((int)data.charAt(i) ^ b);
+					    	}else if(j==2) {
+					    		chaineCryptee += (char)((int)data.charAt(i) ^ c);
+					    	}else if(j==3) {
+					    		chaineCryptee += (char)((int)data.charAt(i) ^ d);
 					    	}
 					        j++;
-					        if(j >= 2) j = 0;
+					        if(j >= 4) j = 0;
 					    }
 					    
 					    if (a == 109) {
 				        	if (b == 112) {
-				        		if (c == 99) {
-				        			if (d == 100) {
+				        		if (c == 111) {
+				        			if (d == 116) {
 				        				chaineCryptee += "JULIEN";
 				        				}
 				        			}
 				        		}
-				        	}
+				        	}chaineCryptee += "\n"; 
 					    
 				        }
 					}
 				}
-			}chaineCryptee += "\n"; 
+			}
 		return chaineCryptee;
 	}
 }
