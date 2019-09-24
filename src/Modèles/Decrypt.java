@@ -1,7 +1,7 @@
 package Modèles;
 
 public class Decrypt {
-	String decrypt(String data, String key) {
+	static String decrypt(String data, String key) {
 		String chaineCryptee = "";
 	    for(int i = 0, j = 0; i < data.length(); i++)
 	    {

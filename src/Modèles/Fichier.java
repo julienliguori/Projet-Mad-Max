@@ -7,8 +7,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class Files {
-	String getData(String path) {
+import Model.CLcrypt;
+
+public class Fichier {
+	public Fichier() {
+		String file = new String();
+	}
+	
+	public String getData(String path) {
 		String ligne = "";
 		try{
 			InputStream flux=new FileInputStream(path); 
@@ -24,9 +30,13 @@ public class Files {
 			}
 		return ligne;
 	}
-	void setData(String path, String texte) throws IOException {
+	public void setData(String path, String texte) throws IOException {
 		FileWriter fichier = new FileWriter(path);
 	    fichier.write (texte);
 	    fichier.close();
+	}
+	
+	String crypter(String texte, String key) {
+		return Decrypt.decrypt(texte,key);
 	}
 }
