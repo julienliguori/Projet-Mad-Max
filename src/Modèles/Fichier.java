@@ -7,8 +7,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-import Model.CLcrypt;
-
 public class Fichier {
 	public Fichier() {
 		String file = new String();
@@ -36,7 +34,7 @@ public class Fichier {
 	    fichier.close();
 	}
 	
-	String crypter(String texte, String key) {
+	public String crypter(String texte, String key) {
 		return Decrypt.decrypt(texte,key);
 	}
 }

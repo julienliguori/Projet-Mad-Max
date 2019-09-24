@@ -1,12 +1,13 @@
 package Contrôleurs;
 
+import java.io.IOException;
 import java.nio.file.Files;
 
 import Modèles.Fichier;
 
 public class wkf_decrypt {
 
-	Boolean pcs_decrypter(String source_path, String destination_path) {
+	Boolean pcs_decrypter(String source_path, String destination_path) throws IOException {
 		// TODO Auto-generated method stub
 		Fichier o1;
 		String reponse;
@@ -27,5 +28,6 @@ public class wkf_decrypt {
 		System.out.println(reponse);
 		
 		System.out.println("Terminé");
+		return true;
 	}
 }
