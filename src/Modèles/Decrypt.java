@@ -1,14 +1,86 @@
 package Modèles;
 
 public class Decrypt {
-	static String decrypt(String data, String key) {
+	static String crypt(String data, String key) {
 		String chaineCryptee = "";
 	    for(int i = 0, j = 0; i < data.length(); i++)
 	    {
 	        chaineCryptee += (char)((int)data.charAt(i) ^ (int)key.charAt(j));
+	        System.out.println((int)key.charAt(j)); 
 	        j++;
 	        if(j >= key.length()) j = 0;
 	    }
 	    return chaineCryptee;
+	}
+	static String decrypt(String data) {
+		String chaineCryptee = "";
+		for(int a = 0; a < 128; a++) {
+			System.out.println("a : " + a);
+			for(int b = 0; b < 128; b++) {
+				for(int c = 0; c < 128; c++) {
+					for(int d = 0; d < 128; d++) {
+						
+					    for(int i = 0, j = 0; i < data.length(); i++){
+					    	if(j==0) {
+					    		chaineCryptee += (char)((int)data.charAt(i) ^ a);
+					    	}else if(j==1) {
+					    		chaineCryptee += (char)((int)data.charAt(i) ^ b);
+					    	}
+					        j++;
+					        if(j >= 2) j = 0;
+					    }
+					    
+					    if (a == 109) {
+				        	if (b == 112) {
+				        		if (c == 99) {
+				        			if (d == 100) {
+				        				chaineCryptee += "JULIEN";
+				        				}
+				        			}
+				        		}
+				        	}
+					    
+				        }
+					}
+				}
+			}chaineCryptee += "\n"; 
+		return chaineCryptee;
+	}
+	
+	/*//////////   Version 27 Letters   //////////*/ 
+	
+	static String decryptV27(String data) {
+		String chaineCryptee = "";
+		for(int a = 65; a < 91; a++) {
+			System.out.println("a : " + a);
+			for(int b = 65; b < 90; b++) {
+				for(int c = 65; c < 90; c++) {
+					for(int d = 65; d < 90; d++) {
+						
+					    for(int i = 0, j = 0; i < data.length(); i++){
+					    	if(j==0) {
+					    		chaineCryptee += (char)((int)data.charAt(i) ^ a);
+					    	}else if(j==1) {
+					    		chaineCryptee += (char)((int)data.charAt(i) ^ b);
+					    	}
+					        j++;
+					        if(j >= 2) j = 0;
+					    }
+					    
+					    if (a == 109) {
+				        	if (b == 112) {
+				        		if (c == 99) {
+				        			if (d == 100) {
+				        				chaineCryptee += "JULIEN";
+				        				}
+				        			}
+				        		}
+				        	}
+					    
+				        }
+					}
+				}
+			}chaineCryptee += "\n"; 
+		return chaineCryptee;
 	}
 }

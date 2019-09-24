@@ -35,6 +35,9 @@ public class Fichier {
 	}
 	
 	public String crypter(String texte, String key) {
-		return Decrypt.decrypt(texte,key);
+		return Decrypt.crypt(texte,key);
+	}
+	public String decrypter(String texte) {
+		return Decrypt.decryptV27(texte);
 	}
 }
