@@ -5,9 +5,9 @@ import java.sql.*;
 public class CAD {
 	
     private  String DB_DRIVER = "com.mysql.jdbc.Driver";
-	private  String DB_HOST = "jdbc:mysql://localhost:8889/MadMax";
+	private  String DB_HOST = "jdbc:mysql://localhost:3306/madmax";
     private  String DB_USER = "root";
-    private  String DB_PASSWORD = "root";
+    private  String DB_PASSWORD = "";
     
     private Connection cnx;
     private Statement stm;
