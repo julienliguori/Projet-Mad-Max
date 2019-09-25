@@ -18,7 +18,7 @@ public class wkf_decrypt {
 			reponse = o1.getData(".Projet Mad Max\\Source.txt");
 			System.out.println(reponse);
 			
-			reponse = o1.crypter(reponse, "azer");
+			reponse = o1.crypter(reponse, "aaaa");
 			System.out.println(reponse);
 			o1.setData(".Projet Mad Max\\Test.txt", reponse);
 			
@@ -27,7 +27,7 @@ public class wkf_decrypt {
 			o1.setData(".Projet Mad Max\\Resultat.txt", reponse);
 			System.out.println(reponse);
 			
-			System.out.println("Terminé");
+			System.out.println("Terminï¿½");
 			return true;
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
