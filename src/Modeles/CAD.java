@@ -5,9 +5,9 @@ import java.sql.*;
 public class CAD {
 	
     private  String DB_DRIVER = "com.mysql.jdbc.Driver";
-	private  String DB_HOST = "jdbc:mysql://localhost:3306/madmax";
+	private  String DB_HOST = "jdbc:mysql://localhost:8889/madmax";
     private  String DB_USER = "root";
-    private  String DB_PASSWORD = "";
+    private  String DB_PASSWORD = "root";
     
     private Connection cnx;
     private Statement stm;
@@ -33,7 +33,9 @@ public class CAD {
 
 	public ResultSet GetRows(String rq_sql,String resultSetName)  {
 		try {
+			System.out.println(rq_sql);
 		return this.stm.executeQuery(rq_sql);
+		
 	} catch(SQLException e){
 		return null;
 		
@@ -45,7 +47,7 @@ public class CAD {
 			this.stm.executeUpdate(rq_sql);
 		} catch(SQLException e){
 			
-			
+			e.printStackTrace();
 		}
 		
 	}

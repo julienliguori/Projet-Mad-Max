@@ -1,8 +1,8 @@
 package Modeles;
 
 public class Map_P {
-	String selectlDbyLoginPassword(String login, String password) {
-		return "";
+public	String selectlDbyLoginPassword(String login, String password) {
+		return "SELECT * FROM `users` where `username` = '" + login + "' AND `password` = '" + password + "';" ;
 		
 	}
 }
