@@ -5,7 +5,7 @@ import java.sql.*;
 public class CAD {
 	
     private  String DB_DRIVER = "com.mysql.jdbc.Driver";
-	private  String DB_HOST = "jdbc:mysql://localhost/";
+	private  String DB_HOST = "jdbc:mysql://localhost:8889/MadMax";
     private  String DB_USER = "root";
     private  String DB_PASSWORD = "root";
     
@@ -18,9 +18,12 @@ public class CAD {
 			this.cnx = DriverManager.getConnection(DB_HOST,DB_USER,DB_PASSWORD);
 			this.stm = this.cnx.createStatement();
 			
+			System.out.println("Connexion reussie.");
 			
 		} catch(SQLException | ClassNotFoundException e) {
 			
+			e.printStackTrace();
+			System.out.println("Connexion ratee.");
 		}
 	}
     

@@ -1,10 +1,13 @@
 package Controleurs;
 
+import Modeles.CAD;
+import Controleurs.wkf_cpte;
+
 public class main {
 
 	public static void main(String[] args) {
 		
-		wkf_decrypt.pcs_decrypter();
+		new wkf_cpte(new CAD());
 	}
 
 }
