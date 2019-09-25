@@ -1,4 +1,4 @@
-package Modèles;
+package Modeles;
 
 public class Decrypt {
 	static String crypt(String data, String key) {
